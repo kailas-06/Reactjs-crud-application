@@ -6,3 +6,7 @@
   justify-content: end;
   margin-bottom: 40px;
 }
+label{
+    font-size: 20px;
+    font-weight: 500;
+}

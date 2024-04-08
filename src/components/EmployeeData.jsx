@@ -44,8 +44,8 @@ const EmployeeData = () => {
                     <button type="submit" className="btn btn-primary">Back</button>
                 </Link>
             </div>
-            <table className="table">
-                <thead>
+            <table className="table table-bordered border-primary">
+                <thead className="table-light">
                     <tr>
                         <th scope="col">Sr.No</th>
                         <th scope="col">Id</th>
@@ -59,8 +59,8 @@ const EmployeeData = () => {
                         <>
                             <tbody>
                                 <tr key={index}>
-                                    <td scope="col">{index + 1}</td>
-                                    <td scope="row" key="{eachdata}">
+                                    <td>{index + 1}</td>
+                                    <td key="{eachdata}">
                                         {eachdata.id}
                                     </td>
                                     <td>{eachdata.name}</td>
@@ -73,14 +73,13 @@ const EmployeeData = () => {
                                                 Edit
                                             </button>
                                         </Link>
-                                    </td>
-                                    <td>
                                         <button
-                                            className="btn btn-danger"
+                                            className="btn btn-danger ms-4"
                                             onClick={() => handleDelete(eachdata.id)}>
                                             Delete
                                         </button>
                                     </td>
+
                                 </tr>
                             </tbody>
                         </>

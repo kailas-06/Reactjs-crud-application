@@ -28,7 +28,7 @@ const UpdateEmployee = () => {
   }
   return (
     <>
-      <h2>Update Employee Form</h2>
+      <h2 className="mb-5">Update Employee Form</h2>
       <div className="container">
         <form className="crud-app">
           <div className="mb-3">
@@ -52,6 +52,7 @@ const UpdateEmployee = () => {
               onChange={(e) => {setEmail(e.target.value)}}
             />
           </div>
+          <div className="mt-5">
           <Link to ="/employeedata">
           <button type="submit"
             className="btn btn-primary"
@@ -62,11 +63,12 @@ const UpdateEmployee = () => {
           </Link>
           <Link to ="/employeedata">
           <button type="submit"
-            className="btn btn-primary ml-5"
+            className="btn btn-primary ms-4"
           >
             Back
           </button>
           </Link>
+          </div>
         </form>
       </div>
     </>
