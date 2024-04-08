@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 
 const EmployeeData = () => {
     const [data, setData] = useState([]);
+    const [tabledark,setTableDark] = useState("")
 
     const getData = (e) => {
         axios
@@ -32,19 +33,29 @@ const EmployeeData = () => {
         localStorage.setItem("email", email)
     }
 
+
     useEffect(() => {
         getData();
     }, []);
 
     return (
         <>
-            <h2>Employee data table:</h2>
-            <div className="btn-data">
+            <div className="form-check form-switch">
+                <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                    onClick={() => {
+                        if (tabledark === 'table-dark') setTableDark("")
+                        else setTableDark('table-dark')
+
+                }}/>
+            </div>
+
+            <div className="btn-data mt-5">
+                <h2>Employee data table:</h2>
                 <Link to="/">
-                    <button type="submit" className="btn btn-primary">Back</button>
+                    <button type="submit" className="btn btn-secondary">Back</button>
                 </Link>
             </div>
-            <table className="table table-bordered border-primary">
+            <table className={`table table-bordered border-primary ${tabledark}`}>
                 <thead className="table-light">
                     <tr>
                         <th scope="col">Sr.No</th>

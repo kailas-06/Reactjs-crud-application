@@ -26,10 +26,12 @@ const EmployeeForm = () => {
   }
   return (
     <>
-      <h2>Employee Form</h2>
+      <div className="form-wrapper">
+        <div className="inner-wrapper">
       <div className="btn-data">
+      <h2>Employee Form</h2>
         <Link to="/employeedata">
-        <button type="submit" className="btn btn-primary">Show data</button></Link>
+        <button type="submit" className="btn btn-secondary">Show data</button></Link>
       </div>
       <div className="container">
         <form className="crud-app">
@@ -39,7 +41,7 @@ const EmployeeForm = () => {
             </label>
             <input type="text" className="form-control" id="name" onChange={(e) => {setName(e.target.value)}} />
           </div>
-          <div className="mb-3">
+          <div className="">
             <label htmlFor="emailinput" className="form-label">
               Email Address
             </label>
@@ -50,12 +52,14 @@ const EmployeeForm = () => {
               onChange={(e) => {setEmail(e.target.value)}}
             />
           </div>
-          <button type="submit" className="btn btn-primary" onClick={handelSubmit}>
+          <button type="submit" className="btn btn-primary mt-4" onClick={handelSubmit}>
             Submit
           </button>
 
         </form>
-      </div>
+          </div>
+          </div>
+</div>
     </>
   );
 };

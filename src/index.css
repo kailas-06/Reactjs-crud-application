@@ -1,12 +1,43 @@
+
+.form-wrapper:before{
+  content: "";
+  position: absolute;
+  background-image: url(../public/images/bg-img.png);
+  background-repeat: no-repeat;
+  background-position: top bottom;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.4;
+  height: 100dvh;
+}
+
+.inner-wrapper{
+  width: 50dvw;
+  padding: 40px 20px;
+  background-color: hsl(0deg 0% 0% / 10%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+
 .crud-app {
   text-align: left;
 }
 .btn-data {
   display: flex;
-  justify-content: end;
+  justify-content: space-between;
   margin-bottom: 40px;
 }
 label{
     font-size: 20px;
     font-weight: 500;
+}
+.table-dark{
+  background-color: #000000;
 }

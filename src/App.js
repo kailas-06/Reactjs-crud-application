@@ -7,7 +7,8 @@ import UpdateEmployee from "./components/UpdateEmployee";
 
 function App() {
   return (
-    <div className="container mt-5">
+
+    <div className="container">
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<EmployeeForm />} />
@@ -15,7 +16,7 @@ function App() {
           <Route exact path="/updateemployee" element={<UpdateEmployee />} />
         </Routes>
       </BrowserRouter>
-    </div>
+      </div>
   );
 }
 
